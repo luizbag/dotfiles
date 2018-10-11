@@ -16,6 +16,8 @@
 (defvar myPackages
   '(better-defaults
     monokai-theme
+    markdown-mode
+    yaml-mode
     magit))
 
 (mapc #'(lambda (package)
@@ -45,6 +47,9 @@
  '(menu-bar-mode nil)
  '(org-enforce-todo-dependencies t)
  '(org-startup-truncated nil)
+ '(package-selected-packages
+   (quote
+    (markdown-mode+ markdown-mode selectric-mode py-autopep8 monokai-theme magit flycheck elpy conda better-defaults)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 
