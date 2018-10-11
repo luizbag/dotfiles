@@ -5,23 +5,29 @@
 [core]
 	editor = subl -w
 	autocrlf = true
-[mergetool]
+
+[merge]
+    tool = meld
     prompt = false
     keepBackup = false
     keepTemporaries = false
+    trustExitCode = true
 
-[merge]
-    tool = winmerge
+[mergetool "meld"]
+    path = C:/Program Files (x86)/Meld/Meld.exe
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/Meld/Meld.exe" $LOCAL $MERGED $REMOTE --output=$MERGED
 
 [mergetool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
     cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
 
 [diff]
-    tool = winmerge
+    tool = meld
+    prompt = false
+    trustExitCode = true
+
+[difftool "meld"]
+    path = C:/Program Files (x86)/Meld/Meld.exe
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/Meld/Meld.exe" $LOCAL $REMOTE
 
 [difftool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE

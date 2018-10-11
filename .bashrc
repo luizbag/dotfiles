@@ -100,3 +100,5 @@ fi
 
 #alias emacsclient="emacsclient -c"
 alias edit=emacsclient
+alias diff="git difftool -y"
+alias merge="git mergetool -y"
