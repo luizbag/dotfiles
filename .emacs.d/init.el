@@ -34,28 +34,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(require 'tramp)
-(setq tramp-default-mode "scp")
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
- '(column-number-mode t)
- '(cursor-type (quote bar))
- '(initial-scratch-message nil)
- '(make-backup-files nil)
- '(menu-bar-mode nil)
- '(org-enforce-todo-dependencies t)
- '(org-startup-truncated nil)
- '(package-selected-packages
-   (quote
-    (markdown-mode+ markdown-mode selectric-mode py-autopep8 monokai-theme magit flycheck elpy conda better-defaults)))
- '(show-paren-mode t)
- '(tool-bar-mode nil))
-
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'monokai t) ;; load monokai theme
 (global-linum-mode t) ;; enable line numbers globally
@@ -77,6 +55,20 @@
 
 ;; magit config
 (load-file "~/.emacs.d/lisp/magit-setup.el")
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
+ '(cursor-type (quote bar))
+ '(initial-scratch-message nil)
+ '(make-backup-files nil)
+ '(org-enforce-todo-dependencies t)
+ '(org-startup-truncated nil)
+ '(show-paren-mode t))
 
 ;; init.el ends here
 (custom-set-faces
