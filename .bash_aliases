@@ -114,7 +114,6 @@ else \
   echo " '$BYellow$PathShort$Color_Off$NewLine'\$ "; \
 fi)'
 
-
 export CHROME_BIN=/usr/bin/chromium-browser
 
 alias edit="emacsclient"

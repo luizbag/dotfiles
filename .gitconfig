@@ -27,6 +27,3 @@
 	tool = meld
 	prompt = false
 	trustExitCode = true
-
-[http]
-	sslVerify = false
