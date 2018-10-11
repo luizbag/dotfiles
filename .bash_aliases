@@ -119,23 +119,6 @@ export CHROME_BIN=/usr/bin/chromium-browser
 
 alias edit="emacsclient"
 
-alias vm="ssh ubuntu@172.24.47.10"
-alias hypervisor_goutham="ssh gouthamr@10.63.152.30"
-alias openstack1="ssh -Y stack@10.63.152.30 -p 2221"
-alias tunnel="ssh -ND 1080 stack@10.63.152.30 -p 2221"
-alias opsk1="ssh admin@10.63.152.206"
-alias opsk3="ssh admin@10.63.152.217"
-alias gerrit="ssh root@review.openstack.netapp.com"
-alias gerrit-bkp="ssh root@10.193.34.250"
-alias hypervisor="ssh root@10.63.152.40"
-alias vm1="ssh -Y stack@10.63.152.40 -p 2221"
-alias vm4="ssh -Y stack@10.63.152.40 -p 2224"
-alias vm3="ssh -Y stack@10.63.152.42 -p 2223"
-alias zuul="ssh root@status.openstack.netapp.com"
-alias gerrit="ssh root@review.openstack.netapp.com"
-alias ostk02="ssh admin@10.250.117.102"
-alias ostk03="ssh admin@10.250.117.103"
-alias provider58="ssh root@10.250.117.58"
-alias provider59="ssh root@10.250.117.59"
-alias provider53="ssh root@10.250.117.53"
-alias provider64="ssh root@10.250.117.64"
+if [ -f ~/.bash_aliases_work ]; then
+    . ~/.bash_aliases_work
+fi
