@@ -34,6 +34,9 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+(require 'tramp)
+(setq tramp-default-mode "scp")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -71,6 +74,9 @@
 
 ;; org-mode config
 (load-file "~/.emacs.d/lisp/org-setup.el")
+
+;; magit config
+(load-file "~/.emacs.d/lisp/magit-setup.el")
 
 ;; init.el ends here
 (custom-set-faces
