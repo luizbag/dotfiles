@@ -94,7 +94,7 @@ Host="\h"
 
 export PS1=$BWhite$User@$Host$Color_Off'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+  echo "$(echo `git status` | grep "nada a submeter" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
     # @4 - Clean repository - nothing to commit
     echo "'$Green'"$(__git_ps1 " (%s)"); \
