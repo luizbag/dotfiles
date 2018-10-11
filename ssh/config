@@ -1,9 +1,0 @@
-Host fit
-HostName bitbucket.org
-User LuizBenedito
-IdentityFile ~/.ssh/id_rsa
-
-Host pessoal
-HostName bitbucket.org
-User luizbag
-IdentityFile ~/.ssh/id_rsa_pessoal
