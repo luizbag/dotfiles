@@ -1,33 +1,24 @@
 [user]
 	name = Luiz Gavioli
 	email = luizbenedito.gavioli@fit-tecnologia.org.br
-	editor = subl -w
+	editor = emacsclient
 [core]
-	editor = subl -w
-	autocrlf = true
+	editor = emacsclient
 
 [merge]
-    tool = meld
-    prompt = false
-    keepBackup = false
-    keepTemporaries = false
-    trustExitCode = true
+	tool = meld
+	prompt = false
+	keepBackup = false
+	keepTemporaries = false
+	trustExitCode = true
 
 [mergetool "meld"]
-    path = C:/Program Files (x86)/Meld/Meld.exe
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/Meld/Meld.exe" $LOCAL $MERGED $REMOTE --output=$MERGED
-
-[mergetool "winmerge"]
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+	cmd = meld $LOCAL $MERGED $REMOTE --output=$MERGED
 
 [diff]
-    tool = meld
-    prompt = false
-    trustExitCode = true
+	tool = meld
+	prompt = false
+	trustExitCode = true
 
 [difftool "meld"]
-    path = C:/Program Files (x86)/Meld/Meld.exe
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/Meld/Meld.exe" $LOCAL $REMOTE
-
-[difftool "winmerge"]
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+	cmd = meld $LOCAL $REMOTE

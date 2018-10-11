@@ -106,3 +106,8 @@ else \
   # @2 - Prompt when not in GIT repo
   echo " '$BYellow$PathShort$Color_Off$NewLine'\$ "; \
 fi)'
+
+
+export CHROME_BIN=/usr/bin/chromium-browser
+
+alias vm="ssh ubuntu@172.24.47.59"
