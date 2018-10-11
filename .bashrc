@@ -76,8 +76,18 @@ xterm*|rxvt*)
     ;;
 esac
 
-export PS1="\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\n\$ \[\033[00m\]"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
+export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 2)\]\u@\h:\w\[$(tput setaf 4)\]]\[$(tput setaf 3)\]$(parse_git_branch)\[$(tput setaf 4)\]\n\\$\[$(tput sgr0)\] "
+
+
+
+
+#export PS1="\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\n\$ \[\033[00m\]"
+
+#export PS1="\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \$ "
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
