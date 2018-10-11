@@ -1,9 +1,21 @@
 [user]
 	name = Luiz Gavioli
-	email = luizbag@gmail.com
+	email = luiz.gavioli@netapp.com
 	editor = emacsclient
 [core]
 	editor = emacsclient
+
+[mergetool "meld"]
+	cmd = meld $LOCAL $MERGED $REMOTE --output=$MERGED
+
+[difftool "meld"]
+	cmd = meld $LOCAL $REMOTE
+	
+[difftool "emerge"]
+	cmd = emacs -nw -Q $LOCAL $REMOTE
+	
+[mergetool "emerge"]
+	cmd = emacs -nw -Q $LOCAL $BASE $REMOTE $MERGED
 
 [merge]
 	tool = meld
@@ -11,14 +23,10 @@
 	keepBackup = false
 	keepTemporaries = false
 	trustExitCode = true
-
-[mergetool "meld"]
-	cmd = meld $LOCAL $MERGED $REMOTE --output=$MERGED
-
 [diff]
 	tool = meld
 	prompt = false
 	trustExitCode = true
 
-[difftool "meld"]
-	cmd = meld $LOCAL $REMOTE
+[http]
+	sslVerify = false
