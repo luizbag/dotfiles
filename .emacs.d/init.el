@@ -18,6 +18,9 @@
     monokai-theme
     markdown-mode
     yaml-mode
+    elpy
+    flycheck
+    py-autopep8
     magit))
 
 (mapc #'(lambda (package)
@@ -28,7 +31,6 @@
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 ;(server-start)
-(line-number-mode t)
 (column-number-mode t)
 (blink-cursor-mode -1)
 (tool-bar-mode -1)
@@ -37,7 +39,11 @@
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'monokai t) ;; load monokai theme
 (global-linum-mode t) ;; enable line numbers globally
+(global-hl-line-mode t)
 (global-auto-revert-mode t)
+(elpy-enable)
+(setenv "WORKON_HOME" "~/miniconda2/envs")
+(pyvenv-workon "emacs")
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -49,6 +55,13 @@
       '("" (:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
                    "%b"))))
+
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; org-mode config
 (load-file "~/.emacs.d/lisp/org-setup.el")
@@ -63,12 +76,36 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(compilation-message-face (quote default))
  '(cursor-type (quote bar))
+ '(custom-safe-themes
+   (quote
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" default)))
+ '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+ '(highlight-tail-colors
+   (quote
+    (("#3C3D37" . 0)
+     ("#679A01" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#3C3D37" . 100))))
  '(initial-scratch-message nil)
+ '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
  '(org-enforce-todo-dependencies t)
  '(org-startup-truncated nil)
- '(show-paren-mode t))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
+ '(pos-tip-background-color "#FFFACE")
+ '(pos-tip-foreground-color "#272822")
+ '(show-paren-mode t)
+ '(weechat-color-list
+   (quote
+    (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
 
 ;; init.el ends here
 (custom-set-faces
