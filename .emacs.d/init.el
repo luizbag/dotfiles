@@ -17,6 +17,7 @@
   '(better-defaults
     monokai-theme
     markdown-mode
+    wc-mode
     yaml-mode
     elpy
     flycheck
@@ -63,6 +64,8 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+(define-key global-map "\C-cw" 'wc-count)
+
 ;; org-mode config
 (load-file "~/.emacs.d/lisp/org-setup.el")
 
@@ -97,4 +100,7 @@
  '(make-backup-files nil)
  '(org-enforce-todo-dependencies t)
  '(org-startup-truncated nil)
+ '(package-selected-packages
+   (quote
+    (wc-mode zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
  '(show-paren-mode t))
