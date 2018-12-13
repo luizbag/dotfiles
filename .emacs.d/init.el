@@ -42,9 +42,11 @@
 (global-linum-mode t) ;; enable line numbers globally
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
-(elpy-enable)
+
 (setenv "WORKON_HOME" "~/miniconda2/envs")
 (pyvenv-workon "emacs")
+
+(elpy-enable)
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -84,6 +86,7 @@
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" default)))
+ '(ein:url-or-port (quote ("http://127.0.0.1:8888")))
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
    (quote
@@ -104,3 +107,9 @@
    (quote
     (wc-mode zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
  '(show-paren-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
