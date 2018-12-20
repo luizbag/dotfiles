@@ -101,15 +101,17 @@
  '(initial-scratch-message nil)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
+ '(menu-bar-mode nil)
  '(org-enforce-todo-dependencies t)
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
     (wc-mode zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 140 :width normal)))))
