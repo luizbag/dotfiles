@@ -43,7 +43,7 @@
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
 
-(setenv "WORKON_HOME" "~/miniconda2/envs")
+(setenv "WORKON_HOME" "~/miniconda3/envs")
 (pyvenv-workon "emacs")
 
 (elpy-enable)
