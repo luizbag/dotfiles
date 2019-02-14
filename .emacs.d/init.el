@@ -106,7 +106,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (wc-mode zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
+    (selectric-mode wc-mode zenburn-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
