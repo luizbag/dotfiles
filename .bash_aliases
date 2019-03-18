@@ -121,3 +121,5 @@ alias edit="emacsclient"
 if [ -f ~/.bash_aliases_work ]; then
     . ~/.bash_aliases_work
 fi
+
+alias xshell="ssh luizbag@198.245.62.27"
