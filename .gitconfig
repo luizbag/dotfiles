@@ -27,3 +27,5 @@
 	tool = meld
 	prompt = false
 	trustExitCode = true
+[alias]
+	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"

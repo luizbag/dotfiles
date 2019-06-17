@@ -124,3 +124,5 @@ fi
 
 alias xshell="ssh luizbag@198.245.62.27"
 alias rm="rm -I"
+alias spoon="~/Pentaho/design-tools/data-integration/spoon.sh"
+alias robo3t="~/robo3t/bin/robo3t"

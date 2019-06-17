@@ -22,6 +22,7 @@
     elpy
     flycheck
     py-autopep8
+    neotree
     magit))
 
 (mapc #'(lambda (package)
@@ -73,6 +74,11 @@
 
 ;; magit config
 (load-file "~/.emacs.d/lisp/magit-setup.el")
+
+;; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-smart-open t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -5,7 +5,8 @@
   (setq planner-file (expand-file-name "planner.org"))
   (setq tickler-file (expand-file-name "ticlker.org"))
   (setq someday-file (expand-file-name "someday.org"))
-  (setq journal-file (expand-file-name "journal.org")))
+  (setq journal-file (expand-file-name "journal.org"))
+  (setq meetings-file (expand-file-name "meetings.org")))
 
 (require 'org)
 (setq org-agenda-files `(,inbox-file
@@ -20,6 +21,9 @@
 			       "* TODO %i%?")
 			      ("n" "Notes [inbox]" entry
 			       (file+headline ,inbox-file "Notas")
+			       "* %i%?")
+			      ("m" "Meeting" entry
+			       (file+headline ,meetings-file "Meetings")
 			       "* %i%?")
 			      ("T" "Tickler" entry
 			       (file+headline ,tickler-file "Tickler")
