@@ -19,9 +19,6 @@
     markdown-mode
     wc-mode
     yaml-mode
-    elpy
-    flycheck
-    py-autopep8
     neotree
     magit))
 
@@ -44,11 +41,6 @@
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
 
-(setenv "WORKON_HOME" "~/miniconda3/envs")
-(pyvenv-workon "emacs")
-
-(elpy-enable)
-
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (setq ido-use-filename-at-point 'guess)
@@ -59,13 +51,6 @@
       '("" (:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
                    "%b"))))
-
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
-
-(require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 (define-key global-map "\C-cw" 'wc-count)
 
@@ -112,7 +97,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (selectric-mode wc-mode monokai-theme yaml-mode py-autopep8 monokai-theme markdown-mode magit flycheck elpy better-defaults)))
+    (wc-mode monokai-theme yaml-mode monokai-theme markdown-mode magit better-defaults)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces

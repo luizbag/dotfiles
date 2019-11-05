@@ -1,6 +1,6 @@
 [user]
 	name = Luiz Gavioli
-	email = xxxxxxxxxxxxxxxxx
+	email = 428691+luizbag@users.noreply.github.com
 	editor = emacsclient
 [core]
 	editor = emacsclient
@@ -18,13 +18,13 @@
 	cmd = emacs -nw -Q $LOCAL $BASE $REMOTE $MERGED
 
 [merge]
-	tool = meld
+	tool = emerge
 	prompt = false
 	keepBackup = false
 	keepTemporaries = false
 	trustExitCode = true
 [diff]
-	tool = meld
+	tool = emerge
 	prompt = false
 	trustExitCode = true
 [alias]
