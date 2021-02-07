@@ -18,13 +18,13 @@
 	cmd = emacs -nw -Q $LOCAL $BASE $REMOTE $MERGED
 
 [merge]
-	tool = emerge
+	tool = meld
 	prompt = false
 	keepBackup = false
 	keepTemporaries = false
 	trustExitCode = true
 [diff]
-	tool = emerge
+	tool = meld
 	prompt = false
 	trustExitCode = true
 [alias]
