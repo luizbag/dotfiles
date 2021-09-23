@@ -7,7 +7,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -15,6 +15,8 @@
 
 (defvar myPackages
   '(better-defaults
+    elpy
+    flycheck
     monokai-theme
     markdown-mode
     wc-mode
@@ -46,6 +48,12 @@
 (setq ido-use-filename-at-point 'guess)
 (setq ido-create-new-buffer 'always)
 (ido-mode 1)
+
+(elpy-enable)
+
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (setq frame-title-format
       '("" (:eval (if (buffer-file-name)
