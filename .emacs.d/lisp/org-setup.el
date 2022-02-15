@@ -1,6 +1,6 @@
 ;;-*- coding: utf-8-unix; -*-
 ;; Org mode setup
-(let ((default-directory "~/Dropbox/planner"))
+(let ((default-directory "~/planner"))
   (setq inbox-file (expand-file-name "inbox.org"))
   (setq planner-file (expand-file-name "planner.org"))
   (setq tickler-file (expand-file-name "ticlker.org"))
