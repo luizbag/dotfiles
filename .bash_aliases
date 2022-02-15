@@ -123,3 +123,5 @@ if [ -f ~/.bash_aliases_work ]; then
 fi
 
 alias rm="rm -I"
+
+alias jekyll="bundle exec jekyll"
