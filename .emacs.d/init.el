@@ -17,7 +17,7 @@
   '(better-defaults
     elpy
     flycheck
-    monokai-theme
+    zenburn-theme
     markdown-mode
     wc-mode
     yaml-mode
@@ -38,7 +38,7 @@
 (menu-bar-mode -1)
 
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'monokai t) ;; load monokai theme
+(load-theme 'zenburn t) ;; load monokai theme
 (global-linum-mode t) ;; enable line numbers globally
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
