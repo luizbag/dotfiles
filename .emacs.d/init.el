@@ -17,6 +17,7 @@
   '(better-defaults
     elpy
     flycheck
+    vue-mode
     zenburn-theme
     markdown-mode
     wc-mode
