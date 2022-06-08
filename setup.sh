@@ -1,3 +1,6 @@
+git submodule init
+git submodule update
+
 ln -fnrs .emacs.d ~
 ln -fnrs .tmux ~
 ln -fnrs .tmux-powerlinerc ~

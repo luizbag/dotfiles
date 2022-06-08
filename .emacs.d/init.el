@@ -81,23 +81,21 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
- '(compilation-message-face (quote default))
- '(cursor-type (quote bar))
+ '(compilation-message-face 'default)
+ '(cursor-type 'bar)
  '(custom-safe-themes
-   (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" default)))
- '(ein:url-or-port (quote ("http://127.0.0.1:8888")))
- '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+   '("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" default))
+ '(ein:url-or-port '("http://127.0.0.1:8888"))
+ '(highlight-changes-colors '("#FD5FF0" "#AE81FF"))
  '(highlight-tail-colors
-   (quote
-    (("#3C3D37" . 0)
+   '(("#3C3D37" . 0)
      ("#679A01" . 20)
      ("#4BBEAE" . 30)
      ("#1DB4D0" . 50)
      ("#9A8F21" . 60)
      ("#A75B00" . 70)
      ("#F309DF" . 85)
-     ("#3C3D37" . 100))))
+     ("#3C3D37" . 100)))
  '(initial-scratch-message nil)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
@@ -105,8 +103,7 @@
  '(org-enforce-todo-dependencies t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   (quote
-    (wc-mode monokai-theme yaml-mode monokai-theme markdown-mode magit better-defaults)))
+   '(wc-mode monokai-theme yaml-mode monokai-theme markdown-mode magit better-defaults))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
