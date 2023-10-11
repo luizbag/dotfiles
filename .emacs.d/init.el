@@ -40,7 +40,7 @@
 
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'zenburn t) ;; load monokai theme
-(global-linum-mode t) ;; enable line numbers globally
+(global-display-line-numbers-mode t) ;; enable line numbers globally
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
 
