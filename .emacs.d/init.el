@@ -71,6 +71,8 @@
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(menu-bar-mode nil)
+ '(package-selected-packages
+   '(neotree wc-mode markdown-mode zenburn-theme better-defaults))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
