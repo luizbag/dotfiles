@@ -100,8 +100,10 @@ if [ $? -eq 0 ]; then \
     echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
     en=$?; \
     echo `git status` | grep "nada a submeter" > /dev/null 2>&1; \
+    br=$?; \
+    echo `git status` | grep "nada a memorizar" > /dev/null 2>&1; \
     pt=$?; \
-    if [ "$en" -eq "0" ] || [ "$pt" -eq "0" ]; then \
+    if [ "$en" -eq "0" ] || [ "$pt" -eq "0" ] || [ "$br" -eq "0" ]; then \
       # @4 - Clean repository - nothing to commit
       echo "'$Green'"$(__git_ps1 " (%s)"); \
     else \
