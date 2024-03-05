@@ -127,3 +127,5 @@ fi
 alias rm="rm -I"
 
 alias jekyll="bundle exec jekyll"
+
+alias python="python3"

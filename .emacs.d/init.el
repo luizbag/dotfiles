@@ -71,8 +71,10 @@
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(menu-bar-mode nil)
+ '(vc-make-backup-files nil)
+ '(make-backup-files nil)
  '(package-selected-packages
-   '(neotree wc-mode markdown-mode zenburn-theme better-defaults))
+   '(selectric-mode neotree wc-mode markdown-mode zenburn-theme better-defaults))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
