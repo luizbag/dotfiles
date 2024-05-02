@@ -8,6 +8,7 @@ ln -fnrs .tmux-themes ~
 ln -fnrs .tmux.conf ~
 ln -fnrs .gitconfig ~
 ln -fnrs .bash_aliases ~
+ln -fnrs .xsessionrc ~
 ln -fnrs bin ~/bin
 
 cp -R .config ~
