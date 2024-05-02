@@ -70,12 +70,12 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
- '(menu-bar-mode nil)
- '(vc-make-backup-files nil)
  '(make-backup-files nil)
+ '(menu-bar-mode nil)
  '(package-selected-packages
    '(selectric-mode neotree wc-mode markdown-mode zenburn-theme better-defaults))
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(vc-make-backup-files nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
