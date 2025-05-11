@@ -1,9 +1,9 @@
 [user]
 	name = Luiz Gavioli
 	email = 428691+luizbag@users.noreply.github.com
-	editor = emacsclient
+	editor = subl -n -w
 [core]
-	editor = emacsclient
+	editor = subl -n -w
 
 [mergetool "meld"]
 	cmd = meld $LOCAL $MERGED $REMOTE --output=$MERGED
