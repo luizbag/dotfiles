@@ -3,7 +3,7 @@
 
 ;; INSTALL PACKAGES
 ;; --------------------------------------
-;(setq debug-on-error t)
+(setq debug-on-error t)
 (require 'package)
 
 (add-to-list 'package-archives
@@ -15,8 +15,8 @@
 
 (defvar myPackages
   '(better-defaults
-    zenburn-theme
     markdown-mode
+    zenburn-theme
     wc-mode
     neotree))
 
@@ -30,14 +30,15 @@
 ;(server-start)
 (column-number-mode t)
 (blink-cursor-mode -1)
-(tool-bar-mode -1)
+;(tool-bar-mode -1)
 (menu-bar-mode -1)
 
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'zenburn t) ;; load monokai theme
+(load-theme 'zenburn t) ;; load zenburn theme
 (global-display-line-numbers-mode t) ;; enable line numbers globally
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
+(global-visual-line-mode t)
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -62,6 +63,12 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-smart-open t)
+
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,12 +76,12 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(custom-safe-themes
+   '("f079ef5189f9738cf5a2b4507bcaf83138ad22d9c9e32a537d61c9aae25502ef" default))
  '(global-display-line-numbers-mode t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(package-selected-packages
-   '(selectric-mode neotree wc-mode markdown-mode zenburn-theme better-defaults))
- '(tool-bar-mode nil)
+  '(tool-bar-mode nil)
  '(vc-make-backup-files nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
