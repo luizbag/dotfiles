@@ -17,6 +17,9 @@
   '(better-defaults
     markdown-mode
     zenburn-theme
+    elpy
+    flycheck
+    py-autopep8
     wc-mode
     neotree))
 
@@ -64,10 +67,15 @@
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-smart-open t)
 
-(use-package elpy
-  :ensure t
-  :init
-  (elpy-enable))
+;; python
+(elpy-enable)
+
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+(use-package py-autopep8
+  :hook ((python-mode) . py-autopep8-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -81,7 +89,9 @@
  '(global-display-line-numbers-mode t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
-  '(tool-bar-mode nil)
+ '(package-selected-packages
+   '(flycheck zenburn-theme wc-mode neotree monokai-theme markdown-mode elpy better-defaults))
+ '(tool-bar-mode nil)
  '(vc-make-backup-files nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
